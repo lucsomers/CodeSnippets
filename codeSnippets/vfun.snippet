@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>vfun</Title>
+			<Shortcut>vfun</Shortcut>
+			<Description>Code snippet for public virtual method</Description>
+			<Author>Luc Somers</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+      <Declarations>
+        <Literal>
+          <ID>methodname</ID>
+          <ToolTip>name of the method</ToolTip>
+          <Default>MethodName</Default>
+        </Literal>
+      </Declarations>
+			<Code Language="csharp"><![CDATA[public virtual void $methodname$()
+      {
+        $end$
+      }]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

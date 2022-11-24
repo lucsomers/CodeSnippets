@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>nw</Title>
+			<Shortcut>nw</Shortcut>
+			<Description>Code snippet for new inline variable</Description>
+			<Author>Luc Somers</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+      <Declarations>
+        <Literal>
+          <ID>variableType</ID>
+          <ToolTip>type</ToolTip>
+          <Default>var</Default>
+        </Literal>
+        <Literal>
+          <ID>variableName</ID>
+          <ToolTip>the name of the variable</ToolTip>
+          <Default>tempVar</Default>
+        </Literal>
+      </Declarations>
+			<Code Language="csharp"><![CDATA[$variableType$ $variableName$ = new $variableType$($end$);]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

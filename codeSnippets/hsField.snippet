@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>hsfield</Title>
+			<Shortcut>hsfield</Shortcut>
+			<Description>Code snippet for header and serialized field</Description>
+			<Author>Luc Somers</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+      <Imports>
+        <Import>
+          <Namespace>UnityEngine</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>headerName</ID>
+          <ToolTip>name of the header</ToolTip>
+          <Default></Default>
+        </Literal>
+        <Literal>
+          <ID>string</ID>
+          <ToolTip>object type</ToolTip>
+          <Default>string</Default>
+        </Literal>
+        <Literal>
+          <ID>fieldName</ID>
+          <ToolTip>the name of the field</ToolTip>
+          <Default>name</Default>
+        </Literal>
+      </Declarations>
+			<Code Language="csharp"><![CDATA[[Header("$headerName$")]
+      [SerializeField]
+      private $string$ $fieldName$;$end$]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

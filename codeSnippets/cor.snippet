@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>Coroutine</Title>
+			<Shortcut>cor</Shortcut>
+			<Description>Code snippet for private coroutine</Description>
+			<Author>Luc Somers</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+      <Imports>
+        <Import>
+          <Namespace>System.Collections</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>methodname</ID>
+          <ToolTip>name of the method</ToolTip>
+          <Default>MethodName</Default>
+        </Literal>
+        <Literal>
+          <ID>waitTime</ID>
+          <ToolTip>waiting time in seconds</ToolTip>
+          <Default>1f</Default>
+        </Literal>
+      </Declarations>
+			<Code Language="csharp">
+        <![CDATA[private IEnumerator $methodname$()
+    {
+
+        yield return new WaitForSeconds($waitTime$);
+        $end$
+    }]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>
