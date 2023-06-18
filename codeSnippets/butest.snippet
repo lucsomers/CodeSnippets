@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>Bunit Test Methods</Title>
+			<Shortcut>butest</Shortcut>
+			<Description>Code snippet to create Bunit test initialize and cleanup methods in an MSTest class</Description>
+			<Author>Wouter Koopman</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Imports>
+				<Import>
+					<Namespace>AngleSharp.Html.Dom</Namespace>
+				</Import>
+				<Import>
+					<Namespace>Bunit</Namespace>
+				</Import>
+			</Imports>
+			<Declarations>
+				<Literal>
+					<ID>component</ID>
+					<ToolTip>type of the Component to render</ToolTip>
+					<Default>Component</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp">
+				<![CDATA[private Bunit.TestContext _ctx;
+    private IRenderedComponent<$component$> _fixture;
+
+    [TestInitialize]
+    public void TestInitialize()
+    {
+        _ctx = new Bunit.TestContext();
+        _fixture = _ctx.RenderComponent<$component$>(_ => { });
+    }
+
+    [TestCleanup]
+    public void TestCleanup()
+    {
+        _ctx.Dispose();
+        _fixture.Dispose();
+    }
+
+    [TestMethod]
+    public void $component$_RendersCorrectly()
+    {
+        // Assert
+
+    }]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>
