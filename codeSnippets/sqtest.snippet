@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>Sqlite Test Methods</Title>
+			<Shortcut>sqtest</Shortcut>
+			<Description>Code snippet to create Sqlite test initialize and cleanup methods in an MSTest class</Description>
+			<Author>Wouter Koopman</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+      <Imports>
+        <Import>
+          <Namespace>Microsoft.Data.Sqlite</Namespace>
+		</Import>
+		<Import>
+		  <Namespace>Microsoft.EntityFrameworkCore</Namespace>
+		</Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>context</ID>
+          <ToolTip>type of the DbContext</ToolTip>
+          <Default>Context</Default>
+        </Literal>
+      </Declarations>
+			<Code Language="csharp">
+	<![CDATA[private SqliteConnection _connection;
+        private DbContextOptions<$context$> _options;
+
+        [TestInitialize]
+        public void TestInitialize()
+        {
+            _connection = new SqliteConnection("Filename=:memory:");
+            _connection.Open();
+
+            _options = new DbContextOptionsBuilder<$context$>()
+                .UseSqlite(_connection)
+                .Options;
+
+            using $context$ context = new $context$(_options);
+            context.Database.EnsureCreated();
+        }
+
+        [TestCleanup]
+        public void TestCleanup()
+        {
+            _connection.Dispose();
+        }]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

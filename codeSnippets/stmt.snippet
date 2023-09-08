@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>stmt</Title>
+			<Shortcut>stmt</Shortcut>
+			<Description>Code snippet for creating a serialized TMP_Text</Description>
+			<Author>Wouter Koopman</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+      <Imports>
+        <Import>
+          <Namespace>TMPro</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>fieldName</ID>
+          <ToolTip>the name of the field</ToolTip>
+          <Default>name</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        <![CDATA[[SerializeField]
+        private TMP_Text $fieldName$;$end$]]>
+      </Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

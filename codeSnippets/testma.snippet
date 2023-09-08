@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
-  <CodeSnippet Format="1.0.0">
-    <Header>
-      <Title>Test Method</Title>
-      <Shortcut>testme</Shortcut>
-      <Description>Code snippet to create MSTest Test method with Triple-A comments</Description>
-      <Author>Wouter Koopman</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-    </Header>
-    <Snippet>
-      <Declarations>
-        <Literal>
-          <ID>name</ID>
-          <ToolTip>Replace with the name of the test method</ToolTip>
-          <Default>MyTestMethod</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="csharp">
-        <![CDATA[[TestMethod]
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>Test Method</Title>
+			<Shortcut>testma</Shortcut>
+			<Description>Code snippet to create MSTest Test method with Triple-A comments</Description>
+			<Author>Wouter Koopman</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>name</ID>
+					<ToolTip>Replace with the name of the test method</ToolTip>
+					<Default>MyTestMethod</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp">
+	<![CDATA[[TestMethod]
 		public void $name$()
 		{
 		// Arrange
@@ -31,7 +31,41 @@
 		// Assert
 
 		}]]>
-      </Code>
-    </Snippet>
-  </CodeSnippet>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>Test Method</Title>
+			<Shortcut>testme</Shortcut>
+			<Description>Code snippet to create MSTest Test method with Triple-A comments</Description>
+			<Author>Wouter Koopman</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>name</ID>
+					<ToolTip>Replace with the name of the test method</ToolTip>
+					<Default>MyTestMethod</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp">
+				<![CDATA[[TestMethod]
+		public void $name$()
+		{
+		// Arrange
+		$end$
+
+		// Act
+
+
+		// Assert
+
+		}]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
 </CodeSnippets>
